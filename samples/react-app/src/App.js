@@ -28,7 +28,7 @@ function App() {
       videoContainerRef.current,
       controlsOverlayOptions,
     )
-    const mi = new movika.Interactives(mp)
+    const mi = new movika.Interactives(mp, mco)
 
     return () => {
       mi.destroy()

@@ -17,6 +17,6 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "@interactiveplatform/movika-player": "^3.2.0"
+    "@interactiveplatform/movika-player": "^3.3.0"
   }
 }

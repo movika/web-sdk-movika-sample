@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "id": "manifest-uuid-1",
+    "version": "3.2",
+    "build": 0,
+    "created": "2021-05-13 10:39:20",
+    "updated": "2021-05-13 10:39:20",
+    "media": {
+      "videos": [
+        {
+          "id": "video-id-1",
+          "duration": 9237,
+          "shortlink": null,
+          "variants": [
+            {
+              "url": "https://asazin-cache.cdnvideo.ru/asazin/test/custom_manifest/one.mp4",
+              "type": "mp4",
+              "size": null,
+              "standard": "1080p",
+              "resolution": "1920x1080",
+              "bitrate": null,
+              "cover": null,
+              "preview": null
+            }
+          ]
+        },
+        {
+          "id": "video-id-2",
+          "duration": 12053,
+          "shortlink": null,
+          "variants": [
+            {
+              "url": "https://asazin-cache.cdnvideo.ru/asazin/test/custom_manifest/two.mp4",
+              "type": "mp4",
+              "size": null,
+              "standard": "4K",
+              "resolution": "3840x2160",
+              "bitrate": null,
+              "cover": null,
+              "preview": null
+            }
+          ]
+        },
+        {
+          "id": "video-id-3",
+          "duration": 20417,
+          "shortlink": null,
+          "variants": [
+            {
+              "url": "https://asazin-cache.cdnvideo.ru/asazin/test/custom_manifest/three.mp4",
+              "type": "mp4",
+              "size": null,
+              "standard": "1080p",
+              "resolution": "1920x1080",
+              "bitrate": null,
+              "cover": null,
+              "preview": null
+            }
+          ]
+        }
+      ]
+    },
+    "initChapterId": "chapter-id-1"
+  },
+  "chapters": [
+    {
+      "id": "chapter-id-1",
+      "videoId": "video-id-1",
+      "containers": [
+        {
+          "id": "723e4567-e89b-12d3-a456-426614174000",
+          "startTime": 2400,
+          "fallbackStrategy": "await",
+          "type": "RandomPositionChoice",
+          "layout": {
+            "type": "customLayout"
+          },
+          "props": {
+            "xThreshold": 0.5,
+            "yThreshold": 0.5
+          },
+          "controls": [
+            {
+              "id": "control-id-1",
+              "type": "SimpleButton",
+              "layoutParams": {
+                "x": 0.25,
+                "y": 0.1,
+                "width": 0.3,
+                "height": 0.1
+              },
+              "props": {
+                "text": "Two",
+                "backgroundColor": "orangered"
+              },
+              "events": [
+                {
+                  "type": "onDblClick",
+                  "action": {
+                    "type": "setNextBranch",
+                    "args": {
+                      "branchId": "chapter-id-1-branch-1",
+                      "shouldOpenNow": true
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "control-id-2",
+              "type": "SimpleButton",
+              "layoutParams": {
+                "x": 0.3,
+                "y": 0.3,
+                "width": 0.3,
+                "height": 0.1
+              },
+              "props": {
+                "text": "Three"
+              },
+              "events": [
+                {
+                  "type": "onClick",
+                  "action": {
+                    "type": "setNextBranch",
+                    "args": {
+                      "branchId": "chapter-id-1-branch-2",
+                      "shouldOpenNow": true
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "branches": [
+        {
+          "id": "chapter-id-1-branch-1",
+          "chapterId": "chapter-id-2",
+          "weight": 1
+        },
+        {
+          "id": "chapter-id-1-branch-2",
+          "chapterId": "chapter-id-3",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "chapter-id-2",
+      "videoId": "video-id-2",
+      "branches": []
+    },
+    {
+      "id": "chapter-id-3",
+      "videoId": "video-id-3",
+      "branches": []
+    }
+  ]
+}
