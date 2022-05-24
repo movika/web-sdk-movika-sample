@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^5.70.0",
+    "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
     "@interactiveplatform/movika-player": "^3.3.0"

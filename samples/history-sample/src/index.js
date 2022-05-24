@@ -57,10 +57,10 @@ const mco = new movika.ControlsOverlay(
   videoContainerElement,
   controlsOverlayOptions,
 )
-const mi = new movika.Interactives(mp)
+const mi = new movika.Interactives(mp, mco)
 
 // instead of using 'src' and 'initialChapter' in 'playerOptions' above
-// mp.attachManifest(SOURCE, CHAPTER)
+// mp.attachManifest({ manifest: SOURCE, initialChapter: CHAPTER })
 
 const onHistoryChange = ({ detail }) => {
   console.log(detail)
